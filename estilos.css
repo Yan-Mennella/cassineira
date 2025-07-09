@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+}
+
+header {
+    font-size: 0.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: chocolate;
+    padding: 10px;
+    color: white;
+}
+
+header span {
+    margin-right: 150px;
+}
+
+.links {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.links a:hover {
+    color: rgba(211, 211, 211, 0.419);
+    transition: color 0.5s ease;
+}

@@ -99,10 +99,49 @@ h2 {
 
 .linksh2 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-left: 900px;
     margin-top: -60px;
+    color: white;
+    font-size: 0.95em;
+}
+
+.linksh2 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 0.95em;
+}
+
+.linksh2 a:hover {
+    color: rgba(211, 211, 211, 0.419);
+    transition: color 0.5s ease;
+}
+
+.user-text {
+    position: relative;
+    top: 6px;
+    margin-left: 150px;
+}
+
+#user {
+    margin-left: 1170px;
+    margin-top: -59px;
+}
+
+#carrinho {
+    margin-left: 1410px;
+    margin-top: -57px;
+}
+
+.carrinho-text {
+    position: relative;
+    top: 0px;
+    left: 75px;
 }
 
 .parte-inferior-header {

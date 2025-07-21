@@ -2,198 +2,49 @@
 
 * {
     margin: 0;
-    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
-    font-size: 0.6em;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: chocolate;
-    color: white;
-    position: relative;
-    height: 235px;
-    padding-top: 10px;
-    padding-bottom: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    overflow: hidden;
-}
-
-h1 {
+    background-color: #3A3A3A;
+    height: 100px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
+    align-items: center ;
+    padding: 0 20px;
 }
 
-header span {
-    margin-right: 150px;
-}
-
-.links {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    margin-left: 80px;
-}
-
-.links a {
-    color: white;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-}
-
-.links a:hover {
-    color: rgba(211, 211, 211, 0.419);
-    transition: color 0.5s ease;
-}
-
-#icone-fone {
-    margin-top: 1px;
-    margin-bottom: 2px;
-}
-
-h2 {
-    background-color: black;
-    height: 150px;
-    top: 50px;
-    left: 0;
-    right: 0;
+.logo img {
+    height: 90px;
     width: auto;
-    margin-left: 0px;
-    margin-right: 0px;
-    position: absolute;
-    z-index: 2;
+    border-radius: 50px;
 }
 
-#botao-logo-inicio {
-    border-radius: 90px;
-    height: 100px;
-    margin-top: 23px;
-    margin-left: 91px;
+.slogan p {
+    margin-left: 250px;
+    font-size: 1.3em;
 }
 
-.pesquisa {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 500px;
-    margin-top: -77px;
-    background-color: white;
-    border-radius: 25px;
-    padding: 5px 10px;
-    width: 550px;
+.contato {
+    margin-left: 180px;
+    font-size: 1.3em;
+}
+
+.icones-contato img {
     height: 40px;
+    margin-left: 20px;
 }
 
-.pesquisa input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 25px;
-}
-
-.pesquisa button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.linksh2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 900px;
-    margin-top: -60px;
-    color: white;
-    font-size: 0.95em;
-}
-
-.linksh2 a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.icones-contato a {
     text-decoration: none;
+}
+
+body {
     color: white;
-    font-size: 0.95em;
-}
-
-.linksh2 a:hover {
-    color: rgba(211, 211, 211, 0.419);
-    transition: color 0.5s ease;
-}
-
-.user-text {
-    position: relative;
-    top: 6px;
-    margin-left: 150px;
-}
-
-#user {
-    margin-left: 1170px;
-    margin-top: -59px;
-}
-
-#carrinho {
-    margin-left: 1410px;
-    margin-top: -57px;
-}
-
-.carrinho-text {
-    position: relative;
-    top: 0px;
-    left: 75px;
-}
-
-.parte-inferior-header {
-    background-color: #CD853F;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    top: auto;
-    top: calc(110px+150px);
-    z-index: 1;
 }
 
 main {
-    padding: 15px;
-    text-align: center;
-}
-
-.container .fileira {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.fileira {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    margin-top: 20px;
-    width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.item-fileira img {
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.item-fileira p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    color: #333;
-}
-
-.item-fileira p strong {
-    color: black;
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
 }

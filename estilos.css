@@ -6,42 +6,53 @@
     box-sizing: border-box;
 }
 
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
     background-color: #3A3A3A;
-    height: 100px;
+    padding: 10px 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center ;
-    padding: 0 20px;
+    height: 100px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .logo img {
-    height: 90px;
+    height: 80px;
     width: auto;
     border-radius: 50px;
 }
 
 .slogan p {
-    margin-left: 250px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    /*margin-left: 250px;*/
+    max-width: 100%;
+    color: #fff;
 }
 
-.contato {
-    margin-left: 180px;
-    font-size: 1.3em;
+.contato p {
+    font-size: 1.1em;
+    /*margin-left: 180px;*/
+    color: #fff;
+}
+
+.icones-contato {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .icones-contato img {
-    height: 40px;
-    margin-left: 20px;
+    height: 35px;
+    width: 35px;
 }
 
-.icones-contato a {
-    text-decoration: none;
-}
 
-body {
-    color: white;
-}
 
 main {
     background-color: #fff;

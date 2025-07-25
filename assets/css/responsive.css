@@ -52,4 +52,12 @@
         padding: 20px;
     }
 
+    footer .icones-contato {
+        gap: 15px;
+    }
+
+    footer .icones-contato img {
+        height: 30px;
+    }
+
 }

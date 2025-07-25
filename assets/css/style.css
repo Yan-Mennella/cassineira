@@ -76,6 +76,39 @@ main {
     padding: 40px;
 }
 
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texto-banner {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.texto-sobre {
+    flex: 1;
+} 
+
 footer {
     background-color: #3A3A3A;
     padding: 30px 20px; 

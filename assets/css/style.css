@@ -19,7 +19,8 @@ header {
     align-items: center ;
     min-height: 100px;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     gap: 20px;
 }
 
@@ -56,10 +57,16 @@ header {
     border-radius: 50px;
 }
 
+.slogan {
+    max-width: 100%;
+    flex: 1;
+    padding: 0 20px;
+}
+
 .slogan p {
     font-size: 1.2em;
     max-width: 100%;
-    color: #fff;
+    color: white;
 }
 
 

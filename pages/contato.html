@@ -1,50 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Cassineira</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Cassineira Cerveja Artesanal</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.jpeg" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="../index.html"><img src="../assets/imgs/logo.jpeg" alt="logo"></a>
-    </div>
-    <div class="slogan">
-      <p>Entre em contato com a Cassineira 📩</p>
-    </div>
-    <nav class="menu">
-      <a href="../index.html">Início</a>
-      <a href="../pages/nossos-rotulos.html">Nossos Rótulos</a>
-      <a href="../pages/onde-comprar.html">Onde Comprar</a>
-      <a href="../pages/contato.html" class="ativo">Contato</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../assets/imgs/logo.jpeg" alt="logo"></a>
+        </div>
 
-  <main>
-    <section class="contato-pagina">
-      <h2>Fale Conosco</h2>
-      <p>Tem dúvidas, sugestões ou quer saber mais sobre nossos rótulos? Envie uma mensagem:</p>
+        <div class="slogan">
+            <p>Entre em contato com a Cassineira Cerveja Artesanal!</p>
+        </div>
 
-      <!-- Formulário simples -->
-      <form class="form-contato">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu email" required>
-        <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+        <!-- Botão hambúrguer -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
-  <footer>
-    <div class="contato"><p>Fale Conosco:</p></div>
-    <div class="icones-contato">
-      <a href="https://wa.me/5553991615483" target="_blank"><img src="../assets/imgs/whatsapp.png" alt="whatsapp"></a>
-      <a href="https://www.instagram.com/cassineiracerveja/" target="_blank"><img src="../assets/imgs/instagram.png" alt="instagram"></a>
-      <a href="https://www.facebook.com/p/cassineiracervejaartesanal-100042202252384/?locale=pt_BR" target="_blank"><img src="../assets/imgs/facebook.png" alt="facebook"></a>
-    </div>
-    <div class="copyright"><p>&copy; 2025 Cassineira Cerveja Artesanal. Todos os direitos reservados</p></div>
-  </footer>
+        <!-- Menu -->
+        <nav class="menu" id="menu">
+            <a href="../index.html">Início</a>
+            <a href="../pages/nossos-rotulos.html">Nossos Rótulos</a>
+            <a href="../pages/onde-comprar.html">Onde Comprar</a>
+            <a href="../pages/contato.html" class="active">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contato-page">
+            <h1>Fale Conosco</h1>
+            <p>Tem alguma dúvida, sugestão ou quer saber mais sobre nossos rótulos? Mande uma mensagem!</p>
+
+            <!-- Formulário de contato -->
+            <form action="#" method="post" class="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Informações diretas -->
+            <div class="info-extra">
+                <h2>Outros canais:</h2>
+                <p><strong>WhatsApp:</strong> <a href="#" target="_blank">(xx) xxxxx-xxxx</a></p>
+                <p><strong>Email:</strong> contato@cerveja.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contato">
+            <p>Fale Conosco:</p>
+        </div>
+
+        <div class="icones-contato">
+            <a href="https://wa.me/5553991615483" target="_blank">
+                <img src="../assets/imgs/whatsapp.png" alt="whatsapp">
+            </a>
+            <a href="https://www.instagram.com/cassineiracerveja/" target="_blank">
+                <img src="../assets/imgs/instagram.png" alt="instagram">
+            </a>
+            <a href="https://www.facebook.com/p/cassineiracervejaartesanal-100042202252384/?locale=pt_BR" target="_blank">
+                <img src="../assets/imgs/facebook.png" alt="facebook">
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Cassineira Cerveja Artesanal. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script do menu hambúrguer -->
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

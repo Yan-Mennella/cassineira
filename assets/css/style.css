@@ -1,62 +1,57 @@
 @charset "UTF-8";
 
-/* ================= RESET ================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ================= BASE ================= */
 body {
     color: white;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif; /* fonte mais moderna */
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
-    line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 header {
-    background: rgba(58, 58, 58, 0.95); /* fundo levemente transparente */
-    backdrop-filter: blur(6px); /* efeito vidro fosco */
-    padding: 10px 30px;
+    background-color: #3A3A3A;
+    padding: 10px 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-    position: fixed; /* header fixo */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    min-height: 80px;
-}
-
-body {
-    padding-top: 120px; /* compensar header fixo */
+    align-items: center;
+    min-height: 100px;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    position: relative;
 }
 
 .logo img {
     height: 80px;
     width: auto;
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
 .slogan {
-    max-width: 500px;
-    text-align: center;
-    color: #FFD700; /* destaque dourado */
+    max-width: 100%;
+    flex: 1;
+    padding: 0 20px;
 }
 
 .slogan p {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: white;
 }
 
-/* ================= MENU ================= */
+/* ===== MENU ===== */
 .menu {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
 }
 
 .menu a {
@@ -64,25 +59,29 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    padding: 8px 14px;
+    padding: 8px 12px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* efeito hover melhorado */
 .menu a:hover,
-.menu a.ativo {
-    background-color: #FFD700;
-    color: #3A3A3A;
+.menu a.active {
+    background-color: #222;
+    color: #fff;
 }
 
-/* ================= MAIN ================= */
-main {
-    color: #000;
-    padding: 40px 20px;
+/* Botão hambúrguer */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
 }
 
-/* ================= BANNER ================= */
+/* ===== BANNER ===== */
 .banner {
     position: relative;
 }
@@ -91,46 +90,19 @@ main {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
 }
 
 .texto-banner {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* centraliza */
+    top: 30%;
+    left: 10%;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 25px;
+    padding: 20px;
     color: #fff;
     border-radius: 10px;
-    text-align: center;
 }
 
-.texto-banner h1 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
-}
-
-.texto-banner p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-
-.btn-banner {
-    background-color: #FFD700;
-    color: #3A3A3A;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-banner:hover {
-    background-color: #e6c200;
-}
-
-/* ================= SOBRE ================= */
+/* ===== SOBRE ===== */
 .sobre {
     display: flex;
     align-items: center;
@@ -144,106 +116,104 @@ main {
     flex: 1;
 }
 
-.img-sobre {
-    flex: 1;
-}
-
-.img-sobre img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-}
-
-/* ================= RÓTULOS ================= */
+/* ===== RÓTULOS ===== */
 .rotulos {
+    padding: 40px 20px;
     text-align: center;
-    margin: 60px 0;
+}
+
+.rotulos h1 {
+    margin-bottom: 20px;
 }
 
 .grid-rotulos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
 
-.card-cerveja {
-    background: #f7f7f7;
+.rotulo-item {
+    background: #f8f8f8;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    text-align: center;
+    transition: transform 0.2s;
 }
 
-.card-cerveja:hover {
+.rotulo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rotulo-item:hover {
     transform: scale(1.03);
 }
 
-.card-cerveja img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* ===== ONDE COMPRAR ===== */
+.onde-comprar {
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.card-cerveja h3 {
-    margin-bottom: 10px;
-    color: #3A3A3A;
-}
-
-/* ================= ONDE COMPRAR ================= */
 .lista-locais {
-    margin: 20px 0;
     list-style: none;
-    padding-left: 0;
+    margin-top: 20px;
+    line-height: 1.8;
 }
 
-.lista-locais li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+/* ===== CONTATO ===== */
+.contato-page {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: auto;
 }
 
-.mapa {
-    margin-top: 30px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* ================= CONTATO ================= */
 .form-contato {
-    max-width: 500px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
+}
+
+.form-contato label {
+    font-weight: bold;
+    color: #333;
 }
 
 .form-contato input,
 .form-contato textarea {
-    padding: 12px;
+    padding: 10px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 6px;
     font-size: 1em;
 }
 
 .form-contato button {
-    background-color: #FFD700;
+    background-color: #3A3A3A;
+    color: white;
     border: none;
     padding: 12px;
-    font-size: 1em;
-    border-radius: 6px;
+    border-radius: 5px;
+    font-size: 1.1em;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .form-contato button:hover {
-    background-color: #e6c200;
+    background-color: #222;
 }
 
-/* ================= FOOTER ================= */
+.info-extra {
+    margin-top: 30px;
+    color: #333;
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background-color: #1c1c1c;
-    padding: 40px 20px; 
+    background-color: #3A3A3A;
+    padding: 30px 20px;
     color: white;
     text-align: center;
     display: flex;
@@ -266,42 +236,45 @@ footer .icones-contato {
 footer .icones-contato img {
     height: 35px;
     transition: transform 0.2s;
-    filter: brightness(0) invert(1); /* deixa ícones brancos */
 }
 
 footer .icones-contato img:hover {
     transform: scale(1.1);
-    filter: invert(74%) sepia(92%) saturate(750%) hue-rotate(2deg) brightness(105%) contrast(101%); /* vira dourado */
 }
 
 footer .copyright {
     margin-top: 40px;
     font-size: 0.9em;
-    color: #aaa;
+    color: #ccc;
 }
 
-/* ================= RESPONSIVIDADE ================= */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .slogan p {
         font-size: 1em;
         text-align: center;
-        padding: 0 10px;
     }
 
     header {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         gap: 10px;
-        height: auto;
-        padding: 20px 20px;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .menu {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        padding-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .menu.active {
+        max-height: 500px; /* suficiente pro menu expandir */
     }
 
     .menu a {
@@ -316,19 +289,16 @@ footer .copyright {
         text-align: center;
     }
 
-    .logo img {
-        height: 70px;
+    .texto-banner {
+        top: 20%;
+        left: 5%;
+        right: 5%;
+        font-size: 0.9em;
     }
 
-    main {
-        padding: 20px;
-    }
-
-    .grid-rotulos {
-        grid-template-columns: 1fr; /* cards em coluna no celular */
-    }
-
-    footer .icones-contato img {
-        height: 30px;
+    .rotulos h1,
+    .onde-comprar h1,
+    .contato-page h1 {
+        font-size: 1.5em;
     }
 }
